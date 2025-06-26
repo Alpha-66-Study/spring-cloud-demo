@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    sentinel:
+      transport:
+        # 控制台地址
+        dashboard: localhost:8080
+      # 立即加载服务
+      eager: true
+      web-context-unify: false
+    openfeign:
+      client:
+        config:
+          default:
+            logger-level: full
+            connect-timeout: 1000
+            read-timeout: 2000
+          service-product:
+            logger-level: full
+            connect-timeout: 3000
+            read-timeout: 5000
+feign:
+  sentinel:
+    enabled: true
