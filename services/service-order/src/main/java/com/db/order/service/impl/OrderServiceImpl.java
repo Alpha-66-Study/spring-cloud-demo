@@ -38,7 +38,7 @@ public class OrderServiceImpl implements OrderService {
     order.setNickName("手机");
     order.setAddress("家");
     ArrayList<Product> objects = new ArrayList<>();
-    objects.add(getProduct(productId));
+    objects.add(product);
     order.setProductList(objects);
     return order;
   }
